@@ -1,6 +1,9 @@
 package com.uenpay.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.uenpay.test.Test;
 
 /**
  * @program: study_springcloud
@@ -10,5 +13,10 @@ import org.springframework.context.annotation.Configuration;
  **/
 @Configuration
 public class TestConfig {
-
+	
+	@Bean
+	public Test getTest() {
+		return new Test();
+	}
+	
 }
